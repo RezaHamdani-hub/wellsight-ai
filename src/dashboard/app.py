@@ -6,6 +6,7 @@ from pathlib import Path
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+from src.agent.advisor import ask_advisor
 
 DATA_FEATURES = Path("data/features")
 MODELS_DIR = Path("models")
@@ -208,3 +209,14 @@ elif page == "Optimization":
         anova_df = pd.DataFrame(anova).T
         anova_df.index.name = "Metric"
         st.dataframe(anova_df, use_container_width=True)
+
+    st.subheader("Production Advisor")
+    st.caption("Ask about wells, fleet performance, or control strategies")
+    user_query = st.text_input(
+        "Ask the advisor:",
+        placeholder="e.g. how is well 42 in sol-1?",
+    )
+    if user_query:
+        with st.spinner("Analyzing..."):
+            response = ask_advisor(user_query)
+        st.markdown(response)

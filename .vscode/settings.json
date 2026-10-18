@@ -1,5 +1,5 @@
 {
-  "python.defaultInterpreterPath": "/Users/rezafadlihamdani/Projects/wellsight-ai/.venv/bin/python",
+  "python.defaultInterpreterPath": ".venv/bin/python",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "charliermarsh.ruff",
   "python.analysis.typeCheckingMode": "basic",

@@ -8,7 +8,7 @@ venv/
 data/raw/
 data/processed/
 data/features/
-models/
+/models/
 mlruns/
 .env
 .ipynb_checkpoints/

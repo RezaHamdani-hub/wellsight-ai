@@ -37,6 +37,7 @@ src = ["src"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["N806"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

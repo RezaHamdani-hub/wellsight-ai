@@ -1,5 +1,9 @@
 """WellSight AI — Operational Dashboard."""
 
+import sys
+
+sys.path.insert(0, ".")
+
 import json
 from pathlib import Path
 
@@ -7,6 +11,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 from src.agent.advisor import ask_advisor
+
+sys.path.insert(0, ".")
 
 DATA_FEATURES = Path("data/features")
 MODELS_DIR = Path("models")

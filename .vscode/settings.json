@@ -1,0 +1,11 @@
+{
+  "python.defaultInterpreterPath": "/Users/rezafadlihamdani/Projects/wellsight-ai/.venv/bin/python",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "charliermarsh.ruff",
+  "python.analysis.typeCheckingMode": "basic",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true
+  },
+  "jupyter.notebookFileRoot": "${workspaceFolder}"
+}

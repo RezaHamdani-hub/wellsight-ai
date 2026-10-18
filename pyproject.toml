@@ -1,0 +1,43 @@
+[project]
+name = "wellsight-ai"
+version = "0.1.0"
+description = "AI-powered well production intelligence platform"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Reza Fadli Hamdani" }]
+
+dependencies = [
+    "pandas>=2.0",
+    "numpy",
+    "pyarrow",
+    "duckdb",
+    "datasets",
+    "scikit-learn",
+    "xgboost",
+    "shap",
+    "fastapi",
+    "uvicorn[standard]",
+    "streamlit",
+    "plotly",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "pre-commit",
+    "ipykernel",
+    "notebook",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
